@@ -1034,23 +1034,35 @@ for (let i = 1; i < masterList.length; i++) {
 
 const btnl = document.getElementById("btnl");
 const screen1 = document.getElementById("screen1");
+
 const btnn = document.getElementById("btnn");
 const screen2 = document.getElementById("screen2");
+
 const btnd = document.getElementById("btnd");
 const screen3 = document.getElementById("screen3");
+
 const colorl = document.querySelector(".colorl");
 const colorLHex = document.querySelector(".colorLHex");
+
 const colorn = document.querySelector(".colorn");
 const colorNHex = document.querySelector(".colorNHex");
+
 const colord = document.querySelector(".colord");
 const colorDHex = document.querySelector(".colorDHex");
+
+// const navbarGrad = document.getElementsByClassName(".navbar");
 
 btnl.addEventListener("click", function () {
   const num = Math.floor(Math.random() * lArray.length);
   screen1.style.backgroundColor = lArray[num];
-  colorl.textContent = ("light " + nameArray[num]).toUpperCase();
-  colorLHex.textContent = nArray[num];
-  console.log("light changed");
+  colorl.textContent = nameArray[num].toUpperCase();
+  colorLHex.textContent = lArray[num];
+  btn1.style.color = dArray[num];
+  //   navbarGrad.style.backgroundImage =
+  //     "linear-gradient(" + screen1.style.backgroundColor + ",";
+  //   screen2.style.backgroundColor + ",";
+  //   screen3.style.backgroundColor + ")";
+  //   console.log("light changed");
 });
 
 btnn.addEventListener("click", function () {
@@ -1064,7 +1076,7 @@ btnn.addEventListener("click", function () {
 btnd.addEventListener("click", function () {
   const num = Math.floor(Math.random() * dArray.length);
   screen3.style.backgroundColor = dArray[num];
-  colord.textContent = ("dark  " + nameArray[num]).toUpperCase();
+  colord.textContent = nameArray[num].toUpperCase();
   colorDHex.textContent = nArray[num];
   console.log("dark changed");
 });
