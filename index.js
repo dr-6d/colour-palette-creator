@@ -999,32 +999,63 @@ hematite,360°,#E35152,#EB8484,#F3B6B7,#FBE9E9
 
 arr = str.split("\n");
 masterList = [];
-arr.forEach(element => masterList.push(element.split(",")));
+arr.forEach((element) => masterList.push(element.split(",")));
 masterList.pop();
 
-const cleanArr = arr => {
-	let count = 0;
-	for (let i = 0; i < arr.length; i++) {
-		for (let j = 0; j < i.length; j++) {
-			if (arr[i][j] === " " || arr[i][j] === "") {
-				console.log(i);
-				count = count + 1;
-			}
-		}
-	}
-	if (count === 0) {
-		console.log("clean array");
-	}
+const cleanArr = (arr) => {
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < i.length; j++) {
+      if (arr[i][j] === " " || arr[i][j] === "") {
+        console.log(i);
+        count = count + 1;
+      }
+    }
+  }
+  if (count === 0) {
+    console.log("clean array");
+  }
 };
 cleanArr(masterList);
 
-console.log(masterList[0], masterList[1], masterList.length);
+// hematite,360°,#E35152,#EB8484,#F3B6B7,#FBE9E9
+
+nameArray = [];
+lArray = [];
+nArray = [];
+dArray = [];
+
+for (let i = 1; i < masterList.length; i++) {
+  dArray.push(masterList[i][2]);
+  nArray.push(masterList[i][4]);
+  lArray.push(masterList[i][5]);
+  nameArray.push(masterList[i][0]);
+}
 
 const btnl = document.getElementById("btnl");
+const screen1 = document.getElementById("screen1");
 const btnn = document.getElementById("btnn");
+const screen2 = document.getElementById("screen2");
 const btnd = document.getElementById("btnd");
+const screen3 = document.getElementById("screen3");
 const color = document.querySelector(".color");
 
 btnl.addEventListener("click", function () {
-	console.log("123");
+  const num = Math.floor(Math.random() * lArray.length);
+  screen1.style.backgroundColor = lArray[num];
+  colorl.textContent = lArray[num];
+  console.log("light changed");
+});
+
+btnn.addEventListener("click", function () {
+  const num = Math.floor(Math.random() * nArray.length);
+  screen2.style.backgroundColor = nArray[num];
+
+  console.log("nuetral changed");
+});
+
+btnd.addEventListener("click", function () {
+  const num = Math.floor(Math.random() * dArray.length);
+  screen3.style.backgroundColor = dArray[num];
+  console.log("dark changed");
 });
