@@ -1018,4 +1018,13 @@ const cleanArr = arr => {
 };
 cleanArr(masterList);
 
-// wtf
+console.log(masterList[0], masterList[1], masterList.length);
+
+const btnl = document.getElementById("btnl");
+const btnn = document.getElementById("btnn");
+const btnd = document.getElementById("btnd");
+const color = document.querySelector(".color");
+
+btnl.addEventListener("click", function () {
+	console.log("123");
+});
