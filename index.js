@@ -1017,3 +1017,5 @@ const cleanArr = arr => {
 	}
 };
 cleanArr(masterList);
+
+// wtf
