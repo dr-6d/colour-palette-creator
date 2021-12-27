@@ -1027,8 +1027,8 @@ dArray = [];
 
 for (let i = 1; i < masterList.length; i++) {
   dArray.push(masterList[i][2]);
-  nArray.push(masterList[i][4]);
-  lArray.push(masterList[i][5]);
+  nArray.push(masterList[i][3]);
+  lArray.push(masterList[i][4]);
   nameArray.push(masterList[i][0]);
 }
 
@@ -1038,24 +1038,33 @@ const btnn = document.getElementById("btnn");
 const screen2 = document.getElementById("screen2");
 const btnd = document.getElementById("btnd");
 const screen3 = document.getElementById("screen3");
-const color = document.querySelector(".color");
+const colorl = document.querySelector(".colorl");
+const colorLHex = document.querySelector(".colorLHex");
+const colorn = document.querySelector(".colorn");
+const colorNHex = document.querySelector(".colorNHex");
+const colord = document.querySelector(".colord");
+const colorDHex = document.querySelector(".colorDHex");
 
 btnl.addEventListener("click", function () {
   const num = Math.floor(Math.random() * lArray.length);
   screen1.style.backgroundColor = lArray[num];
-  colorl.textContent = lArray[num];
+  colorl.textContent = ("light " + nameArray[num]).toUpperCase();
+  colorLHex.textContent = nArray[num];
   console.log("light changed");
 });
 
 btnn.addEventListener("click", function () {
   const num = Math.floor(Math.random() * nArray.length);
   screen2.style.backgroundColor = nArray[num];
-
+  colorNHex.textContent = nArray[num];
+  colorn.textContent = nameArray[num].toUpperCase();
   console.log("nuetral changed");
 });
 
 btnd.addEventListener("click", function () {
   const num = Math.floor(Math.random() * dArray.length);
   screen3.style.backgroundColor = dArray[num];
+  colord.textContent = ("dark  " + nameArray[num]).toUpperCase();
+  colorDHex.textContent = nArray[num];
   console.log("dark changed");
 });
