@@ -19,10 +19,13 @@
 			rel="stylesheet"
 		/>
 		<script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.2/dist/kute.min.js"></script>
-
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
 		<title>home-page</title>
 	</head>
-	<body>
+	<body class="home-page-body">
 		<header>
 			<nav class="navbar navbar-expand-lg ml-auto navbar-dark">
 				<a class="navbar-brand" href="#">
@@ -42,14 +45,20 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="#">
+							<a
+								class="nav-link active"
+								aria-current="page"
+								href="homepage.html"
+							>
 								<button class="btn btn-info">
-									<span class="nav-text">Home </span>
+									<span class="nav-text"
+										><i class="fa fa-download"></i> Your Pallete
+									</span>
 								</button>
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="#">
+							<a class="nav-link active" aria-current="page" href="index.html">
 								<button class="btn btn-warning">
 									<span class="nav-text">Random </span>
 								</button>
@@ -75,7 +84,7 @@
 			<section>
 				<!-- <div class="container-fluid"> -->
 				<div class="main-h1 jumbotron p-3 p-md-5 text-white rounded">
-					<div class="col-md-6 px-0">
+					<div class="col-md-8 px-0">
 						<h1 class="display-4 font-italic">
 							Col-Pal helps you create a color palette for your next project.
 						</h1>
@@ -96,14 +105,16 @@
 		</header>
 		<main>
 			<section>
-				<div class="col justify-left">
-					<h1>Create a new color palette</h1>
+				<div class="container container-fluid d-flex justify-content-center">
+					<button
+						onclick="window.location.href='./index.html'"
+						type="button"
+						class="btn btn-info btn-lg"
+					>
+						Create a Color Pallete now
+					</button>
 				</div>
 			</section>
-			<section></section>
-			<section></section>
-			<section></section>
-			<section></section>
 		</main>
 		<!-- Optional JavaScript; choose one of the two! -->
 		<script src="index.js"></script>

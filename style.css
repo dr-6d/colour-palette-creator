@@ -13,6 +13,7 @@ body {
 	background-color: rgb(28, 27, 27);
 	font-weight: bold;
 }
+
 section {
 	position: relative;
 	display: flex;
@@ -21,7 +22,7 @@ section {
 	min-height: 100px;
 	padding: 100px 20vw;
 	padding-top: 0;
-	background-color: black;
+	background-color: rgba(0, 0, 0, 0.92);
 	color: white;
 }
 
@@ -141,5 +142,8 @@ section {
 .main-h1 {
 	margin-top: 5%;
 	margin-left: -20%;
-	padding-right: 50%;
+}
+
+.home-page-body {
+	background-color: rgb(0, 0, 0);
 }
