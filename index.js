@@ -1049,12 +1049,15 @@ const lColor = new Color(
 );
 
 const btnl = document.getElementById("btnl");
+const screen1Blob = document.getElementById("blob1");
 const screen1 = document.getElementById("screen1");
 
 const btnn = document.getElementById("btnn");
+const screen2Blob = document.getElementById("blob3");
 const screen2 = document.getElementById("screen2");
 
 const btnd = document.getElementById("btnd");
+const screen3Blob = document.getElementById("blob5");
 const screen3 = document.getElementById("screen3");
 
 const colorl = document.querySelector(".colorl");
@@ -1071,6 +1074,7 @@ const colorDHex = document.querySelector(".colorDHex");
 btnl.addEventListener("click", function () {
 	const num = Math.floor(Math.random() * lArray.length);
 	screen1.style.backgroundColor = lArray[num];
+	screen1Blob.style.fill = dArray[num];
 	colorl.textContent = nameArray[num].toUpperCase();
 	colorLHex.textContent = lArray[num];
 	btn1.style.color = dArray[num];
@@ -1079,6 +1083,7 @@ btnl.addEventListener("click", function () {
 btnn.addEventListener("click", function () {
 	const num = Math.floor(Math.random() * nArray.length);
 	screen2.style.backgroundColor = nArray[num];
+	screen2Blob.style.fill = dArray[num];
 	colorNHex.textContent = nArray[num];
 	colorn.textContent = nameArray[num].toUpperCase();
 	console.log("nuetral changed");
@@ -1087,6 +1092,7 @@ btnn.addEventListener("click", function () {
 btnd.addEventListener("click", function () {
 	const num = Math.floor(Math.random() * dArray.length);
 	screen3.style.backgroundColor = dArray[num];
+	screen3Blob.style.fill = lArray[num];
 	colord.textContent = nameArray[num].toUpperCase();
 	colorDHex.textContent = nArray[num];
 	console.log("dark changed");

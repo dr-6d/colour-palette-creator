@@ -13,28 +13,26 @@ body {
 	background-color: rgb(0, 0, 0);
 	font-weight: bold;
 }
-.txt {
-	font-family: "Courier Prime", monospace, "HelveticaNeue-Light",
-		"Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande",
-		sans-serif;
-	letter-spacing: 3.5px;
-}
 
 .navbar-brand {
 	font-weight: bold;
+	font-weight: bolder;
+}
+
+#btnn {
+	color: rgba(0, 0, 0, 0.79);
 }
 
 #btnl,
 #btnn,
 #btnd {
 	width: 190px;
-	/* min-width: 190px; */
+	min-width: 190px;
 	max-width: 190px;
 	letter-spacing: 2.5px;
 	text-align: center;
 	font-weight: bold;
 	font-size: 22px;
-	/* color: white; */
 	font-family: "Courier Prime", monospace, "HelveticaNeue-Light",
 		"Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande",
 		sans-serif;
@@ -59,9 +57,7 @@ body {
 	max-width: 500px;
 	min-width: 500px;
 }
-/*  */
-/*  */
-/*  */
+
 .navbar {
 	padding: 1vw;
 	-webkit-box-shadow: 0 8px 6px -6px rgb(202, 120, 120);
@@ -70,22 +66,7 @@ body {
 	background-color: rgb(27, 26, 26);
 	color: white;
 }
-/* .navbar-inner { */
-/* background: transparent; */
-/* } */
-/*  */
-/*  */
-/*  */
 
-/*  */
-/*  */
-/*  */
-#nav {
-	width: 43%;
-}
-/*  */
-/*  */
-/*  */
 .split {
 	height: 100%;
 	width: 33.33%;
@@ -95,31 +76,22 @@ body {
 	overflow-x: hidden;
 	padding-top: 20px;
 }
-/*  */
-/*  */
-/*  */
+
 .screen1 {
 	left: 0;
 	background-color: #9af8e3;
 }
-/*  */
-/*  */
-/*  */
+
 .screen2 {
 	left: 33.33%;
 	background-color: #b1c578;
 }
-/*  */
-/*  */
-/*  */
-/*  */
+
 .screen3 {
 	right: 0;
 	background-color: #93b1ab;
 }
-/*  */
-/*  */
-/*  */
+
 .centered {
 	position: absolute;
 	min-height: 20%;
@@ -128,4 +100,12 @@ body {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	text-align: center;
+}
+
+.layer2 {
+	background-color: url("./blob2.svg");
+}
+
+.flip {
+	transform: rotate(180deg);
 }
