@@ -1084,8 +1084,8 @@ btnn.addEventListener("click", function () {
 	const num = Math.floor(Math.random() * nArray.length);
 	screen2.style.backgroundColor = nArray[num];
 	screen2Blob.style.fill = dArray[num];
-	colorNHex.textContent = nArray[num];
 	colorn.textContent = nameArray[num].toUpperCase();
+	colorNHex.textContent = nArray[num];
 	console.log("nuetral changed");
 });
 
@@ -1094,6 +1094,6 @@ btnd.addEventListener("click", function () {
 	screen3.style.backgroundColor = dArray[num];
 	screen3Blob.style.fill = lArray[num];
 	colord.textContent = nameArray[num].toUpperCase();
-	colorDHex.textContent = nArray[num];
+	colorDHex.textContent = dArray[num];
 	console.log("dark changed");
 });
