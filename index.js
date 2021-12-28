@@ -999,22 +999,22 @@ hematite,360°,#E35152,#EB8484,#F3B6B7,#FBE9E9
 
 arr = str.split("\n");
 masterList = [];
-arr.forEach((element) => masterList.push(element.split(",")));
+arr.forEach(element => masterList.push(element.split(",")));
 masterList.pop();
 
-const cleanArr = (arr) => {
-  let count = 0;
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < i.length; j++) {
-      if (arr[i][j] === " " || arr[i][j] === "") {
-        console.log(i);
-        count = count + 1;
-      }
-    }
-  }
-  if (count === 0) {
-    console.log("clean array");
-  }
+const cleanArr = arr => {
+	let count = 0;
+	for (let i = 0; i < arr.length; i++) {
+		for (let j = 0; j < i.length; j++) {
+			if (arr[i][j] === " " || arr[i][j] === "") {
+				console.log(i);
+				count = count + 1;
+			}
+		}
+	}
+	if (count === 0) {
+		console.log("clean array");
+	}
 };
 cleanArr(masterList);
 
@@ -1026,11 +1026,27 @@ nArray = [];
 dArray = [];
 
 for (let i = 1; i < masterList.length; i++) {
-  dArray.push(masterList[i][2]);
-  nArray.push(masterList[i][3]);
-  lArray.push(masterList[i][4]);
-  nameArray.push(masterList[i][0]);
+	dArray.push(masterList[i][2]);
+	nArray.push(masterList[i][3]);
+	lArray.push(masterList[i][4]);
+	nameArray.push(masterList[i][0]);
 }
+
+class Color {
+	constructor(btn, screen, color, hex) {
+		this.btn = btn;
+		this.screen = screen;
+		this.color = color;
+		this.hex = hex;
+	}
+}
+
+const lColor = new Color(
+	document.getElementById("btnl"),
+	document.getElementById("screen1"),
+	document.querySelector(".colorl"),
+	document.querySelector(".colorNHex")
+);
 
 const btnl = document.getElementById("btnl");
 const screen1 = document.getElementById("screen1");
@@ -1053,30 +1069,25 @@ const colorDHex = document.querySelector(".colorDHex");
 // const navbarGrad = document.getElementsByClassName(".navbar");
 
 btnl.addEventListener("click", function () {
-  const num = Math.floor(Math.random() * lArray.length);
-  screen1.style.backgroundColor = lArray[num];
-  colorl.textContent = nameArray[num].toUpperCase();
-  colorLHex.textContent = lArray[num];
-  btn1.style.color = dArray[num];
-  //   navbarGrad.style.backgroundImage =
-  //     "linear-gradient(" + screen1.style.backgroundColor + ",";
-  //   screen2.style.backgroundColor + ",";
-  //   screen3.style.backgroundColor + ")";
-  //   console.log("light changed");
+	const num = Math.floor(Math.random() * lArray.length);
+	screen1.style.backgroundColor = lArray[num];
+	colorl.textContent = nameArray[num].toUpperCase();
+	colorLHex.textContent = lArray[num];
+	btn1.style.color = dArray[num];
 });
 
 btnn.addEventListener("click", function () {
-  const num = Math.floor(Math.random() * nArray.length);
-  screen2.style.backgroundColor = nArray[num];
-  colorNHex.textContent = nArray[num];
-  colorn.textContent = nameArray[num].toUpperCase();
-  console.log("nuetral changed");
+	const num = Math.floor(Math.random() * nArray.length);
+	screen2.style.backgroundColor = nArray[num];
+	colorNHex.textContent = nArray[num];
+	colorn.textContent = nameArray[num].toUpperCase();
+	console.log("nuetral changed");
 });
 
 btnd.addEventListener("click", function () {
-  const num = Math.floor(Math.random() * dArray.length);
-  screen3.style.backgroundColor = dArray[num];
-  colord.textContent = nameArray[num].toUpperCase();
-  colorDHex.textContent = nArray[num];
-  console.log("dark changed");
+	const num = Math.floor(Math.random() * dArray.length);
+	screen3.style.backgroundColor = dArray[num];
+	colord.textContent = nameArray[num].toUpperCase();
+	colorDHex.textContent = nArray[num];
+	console.log("dark changed");
 });
